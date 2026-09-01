@@ -1,0 +1,214 @@
+/* =========================================================
+   BIGGIE WOODWORKS
+   Main stylesheet
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  background: #151310;
+  color: #f1eadf;
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
+:root {
+
+  --black: #151310;
+  --dark: #1c1916;
+  --dark-2: #24201b;
+
+  --cream: #f1eadf;
+  --cream-soft: #cfc5b6;
+  --muted: #968d82;
+
+  --wood: #b88959;
+  --wood-light: #d2a06d;
+
+  --orange: #b95d27;
+  --orange-light: #d87537;
+
+  --border: rgba(241, 234, 223, 0.12);
+  --border-strong: rgba(241, 234, 223, 0.20);
+
+  --max-width: 1180px;
+
+}
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+.container {
+  width: min(
+    var(--max-width),
+    calc(100% - 40px)
+  );
+
+  margin: 0 auto;
+}
+
+.section {
+  padding: 110px 0;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 22px;
+
+  color: var(--orange-light);
+
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.eyebrow span {
+  display: block;
+
+  width: 30px;
+  height: 1px;
+
+  background: var(--orange-light);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+h1 em,
+h2 em {
+  color: var(--wood-light);
+  font-style: italic;
+}
+
+.section-heading {
+  max-width: 760px;
+  margin-bottom: 60px;
+}
+
+.section-heading h2,
+.process-intro h2 {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  letter-spacing: -0.03em;
+}
+
+.section-heading > p:last-child {
+  max-width: 650px;
+
+  margin-top: 18px;
+
+  color: var(--cream-soft);
+
+  font-size: 1rem;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1000;
+
+  background: rgba(21, 19, 16, 0.88);
+
+  border-bottom: 1px solid var(--border);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.nav {
+  min-height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  white-space: nowrap;
+}
+
+.logo-mark {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid var(--orange-light);
+  border-radius: 50%;
+
+  color: var(--orange-light);
+
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.logo-name {
+ 
